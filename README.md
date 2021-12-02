@@ -1,18 +1,30 @@
-dheljgfn_dhelix
+db name: dheljgfn_dhelix
 
-dheljgfn_dhelix
+db user: dheljgfn_dhelix
 
-baec.gov.bd
-
-/home/dheljgfn/public_html/static/
-
-/home/dheljgfn/public_html/
+db password: baec.gov.bd
 
 
-/home/dheljgfn/repositories
+STATIC_ROOT = os.path.join('/home/dheljgfn/repositories/static/')
+
+
+
+PYTHON APP
+
+repositories
 
 passenger_wsgi.py
 
 application
 
 dhelix
+
+
+
+https://freedjango.com/deploy-django-on-shared-hosting-cpanel/
+
+https://blog.umersoftwares.com/2019/09/django-shared-hosting.html
+
+https://blog.umersoftwares.com/wp-content/uploads/2019/09/Django_cpanel.pdf
+
+
