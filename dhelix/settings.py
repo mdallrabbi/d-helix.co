@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure--_h92veo29^_982knd&*r#vqii=p8u8ck5lo1zctoocd0hm=4h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.d-helix.co']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.d-helix.co', 'd-helix.co', 'http://d-helix.co/']
 
 
 # Application definition
@@ -76,10 +76,19 @@ WSGI_APPLICATION = 'dhelix.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'dheljgfn_dhelix',
+        'USER': 'dheljgfn_dhelix',
+        'PASSWORD': 'baec.gov.bd',
+        'HOST': 'localhost',
+        'PORT': '3306',
+     }
 }
 
 
@@ -120,13 +129,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
+# STATIC_ROOT = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join('/home/dheljgfn/repositories/static/')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
